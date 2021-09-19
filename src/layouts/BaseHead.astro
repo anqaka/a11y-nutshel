@@ -1,0 +1,11 @@
+---
+
+const {title, description} = Astro.props;
+---
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload stylesheet" href="/styles/fonts.css" as="style">
+<link rel="stylesheet" href="{Astro.resolve('../styles/tailwind.css')}">

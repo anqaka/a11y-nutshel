@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply underline transition-all;
+  }
+  a:hover, a:focus {
+    @apply bg-orange;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+    @apply mb-8
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+  ul {
+    @apply list-disc list-inside pl-8;
+  }
+  b, strong {
+    @apply font-bold;
+  }
+}

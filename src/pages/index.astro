@@ -1,0 +1,187 @@
+---
+// Component Imports
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Markdown } from 'astro/components';
+
+// page props
+let title = 'A11y in a nutshel - MMPL2021';
+---
+
+<BaseLayout title={title}>
+<div
+    class="
+        flex flex-col
+        md:flex-row
+        justify-center
+        items-center
+        mb-16
+    "
+>
+    <h1
+        class="
+            uppercase mb-0
+            text-5xl md:text-8xl
+            md:flex-grow
+            md:text-right md:pr-12
+        "
+    >
+        Inclusion<br><span class="tracking-widest">matters</span>
+    </h1>
+    <div class="mx-auto w-auto max-w-[220px]">
+        <img
+            src="assets/images/accessibility-is-necessity.png"
+            loading="lazy"
+            alt="Accessibility is a necessity"
+        >
+    </div>
+</div>
+<section>
+    <h2>Do you know...?</h2>
+    <div>
+        <div class="mb-12 lg:mr-[30%]">
+            <Markdown>
+                According to the [CDC](https://www.cdc.gov/), **1 in 4 adults has a form of disability**. This is 20% of the population that needs accessibility but currently, out of **350 million active websites** in the US (and over 1 Billion worldwide!), **less than 2% are accessible** to people with disabilities. This disproportion has created the ‘web accessibility gap’.(AccessiBe)
+            </Markdown>
+        </div>
+        <div class="mb-12 lg:mr-[30%]">
+            <Markdown>
+                In February of 2019, 2020, and 2021 WebAIM conducted an accessibility evaluation of the home pages for the top 1,000,000 web sites - [The WebAIM Million](https://webaim.org/projects/million/). 97.4% of home pages had detectable WCAG 2 failures! (only automatically detectable errors).
+            </Markdown>
+            <div class="my-8 max-w-[650px] mx-auto">
+                <img
+                    src="assets/images/webaim-wcag-failures.png"
+                    loading="lazy"
+                    alt="Most common WCAG failures: Low contrast ratio: 86.4% in 2021, 86.3% in 2021, 85.3% in 2019; Missing alternatove text for images: 60.6% in 2021, 66% in 2020, 68% in 2019; Missing form input: 54.4% in 2021, 53.8% in 2021, 52.8% in 2019; Empty links: 51.3% in 2021, 59.9% in 2020, 58.1% in 2019; Missing document language: 28.9% in 2021, 28% in 2020, 33.1% in 2019; Empty buttons: 26.9% in 2021, 28.7% in 2020, 25% in 2019"
+                >
+            </div>
+            <div class="mb-8 max-w-[650px] mx-auto">
+                <img
+                    src="assets/images/webaim-ecommerce.png"
+                    loading="lazy"
+                    alt="Accessibility of home pages in most common ecommerce platforms: Shopify: 14025 (1.4%) with average numbers of errors 54.1, which increase of 5% from last year; Woocommerce: 32127 (3.2%) with average numbers of errors 67, which increase of 30.4% from last year; Magento: 5577 (0.6%) with average numbers of errors 79, which increase of 55.1% from last year"
+                >
+            </div>
+            <div class="mb-8 max-w-[650px] mx-auto">
+                <img
+                    src="assets/images/webaim-js-frameworks.png"
+                    loading="lazy"
+                    alt="Accessibility of home pages in most common js frameworks: React: 26773 (2.7%) with average numbers of errors 50.4, which decrease of 1.9% from last year; MooTools: 8270 (0.8%) with average numbers of errors 54.8, which increase of 674% from last year; GSAP: 6612 (0.7%) with average numbers of errors 57.9, which increase of 12.7% from last year; Requirejs: 13612 (1.4%) with average numbers of errors 60.7, which increase of 18.1% from last year; Prototype: 5313 (0.5%) with average numbers of errors 62.6, which increase of 21.8% from last year; BAckbone.js: 6003 (0.6%) with average numbers of errors 63.9, which increase of 24.4% from last year; Angular: 5775 (0.6%) with average numbers of errors 64.9, which increase of 26.4% from last year; Vuejs: 18358 (1.8%) with average numbers of errors 67.4, which increase of 31.1% from last year;"
+                >
+            </div>
+        </div>
+        <div class="lg:ml-[30%]">
+            <h2>Some facts for e-commerce:</h2>
+            <div class="mb-8">
+                <h3>Data from UK</h3>
+                <Markdown>
+                    The [Purple Pound](https://wearepurple.org.uk/business/) refers to the spending power of disabled households which is defined as a household in which at least one of the members have reported a disability. The key stand out statistics are as follows:
+                    * More than 1 in 5 potential UK consumers are disabled.
+                    * The number of disabled people in the UK is increasing – from 11.9 million (in 2014) to *13.3 million*.
+                    * **The prevalence of disability rises with age**.
+                    * **3 in 4 disabled people** and their families have *walked away* from a UK business citing **poor accessibility** and/or poor customer service.
+                    * The *spending power* of disabled people and their household worldwide is currently estimated to be worth **$8 trillion**, increasing by 14% per annum. Only 10% of businesses have a targeted strategy for this huge market.
+                    * There are 2 billion disabled people in the world that represents 37.5% of world’s population
+                    * Nearly 1 in 5 working adults have a disability.
+                    * 31% of the UK workforce have been formally diagnosed with a mental health issue. Yet only 13% of staff felt able to disclose a mental health issue to their workplace.
+                    * 80% of disabled people have *hidden impairments*.
+                    * In 2016, a survey found that more than 4 million people in the UK abandoned a retail website because of the barriers they found, taking with them an estimated spend of £11.75 billion. In 2019, that *lost business*, the ‘Click-Away Pound’, has grown to **£17.1 billion**.
+                </Markdown>
+            </div>
+        </div>
+        <div class="mb-16">
+            <img
+                src="assets/images/the-purple-pound.jpeg"
+                loading="lazy"
+                alt="The Purple Pound Graphics"
+            >
+        </div>
+        <div class="mb-16 lg:ml-[30%]">
+            <h3>Data from US</h3>
+            <Markdown>
+                All in all, disabled working-age Americans earn an estimated annual income of $490 billion and have an estimated annual discretionary income of more than $20 billion – not to mention the spending power of the friends, family, and professional network  of those with disabilities.
+            </Markdown>
+            <a href="spending-power-of-working-age-adults-with-disabilities.pdf" target="_blank">Check out the summary for more details</a>
+        </div>
+        <div class="mb-8 lg:mr-[30%]">
+            <h2>What about lawsuits?</h2>
+            <Markdown>
+                According to latest [ADA Digital Accessibility Lawsuits (Mid year report 2021)](https://f.hubspotusercontent30.net/hubfs/3280432/Remediated%20-%202021_MidYear_UsableNet_WebAccessibilityLawsuit_Report_FINAL_06292021%20(5).pdf), *one lawsuit is filed every hour*. The number of lawsuits rise from year to year:
+            </Markdown>
+            <div class="mb-8">
+                <figure class="mt-10 max-w-[500px] mx-auto">
+                    <img
+                        src="assets/images/ada-lawsuits-2018-2021.png"
+                        loading="lazy"
+                        alt="ADA Lawsuits: in 2018 - 2314 cases, in 2019 - 2890 cases, in 2020 - 3503 cases, 2021 - 4195 cases (estimated by the end of 2021)"
+                    >
+                    <figcaption>
+                        ADA-based cases so far in 2021 plot a path to 4,000 lawsuits in 2021. This includes cases filed in federal court and those filed in California under the Unruh Act with a direct reference to violation of the ADA.
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <Markdown>
+                    **e-Commerce cited the most in digital accessibility lawsuits** - it  provides a reliable source for plaintiffs as the websites are complicated, change often, and are hard to be maintained for accessibility unless a company has a clear ongoing plan for testing and remediation.
+                </Markdown>
+                <div class="my-8">
+                    <img
+                        src="assets/images/ada-lawsuits-by-industry.png"
+                        loading="lazy"
+                        alt="ADA Lawsuits by industry: e-Commerce: 73.66%, Digital Media & Agencies: 4.14%, Banking/Financial: 3.56%, Food Services: 3.31%, Healthcare: 2.54%, Travel.Hospitality: 1.84%, Automotive: 1.46%, Education: 1,34%, Entertainment & Leisure: 1.08%, Fitness & Wellness: 0.83%, Real Estate Agencies & Properties: 0.45%, Insurance: 0.32%, Telecommunications: 0.06%, Other: 5.41%"
+                        class="mx-auto"
+                    >
+                </div>
+            </div>
+            <div>
+                <Markdown>
+                    Lawsuits in 2021 reflect the importance of considering accessibility for **all digital channels and content**. Accessibility on desktop websites dominates the number of lawsuits. *Mobile Apps continue to rise* along with a new trend in video-related claims. Video claims demand that all videos have closed caption and audio descriptions.
+                </Markdown>
+                <div class="my-8">
+                    <img
+                        src="assets/images/ada-lawsuit-screens.png"
+                        loading="lazy"
+                        alt="ADA Lawsuits by devices: Desktop websites: 1422 claims, Mobile app: 109 claims, Video accessibility: 109 claims, Combined Web & App: 40 claims, Mobile Webiste: 1 claim"
+                        class="mx-auto"
+                    >
+                </div>
+            </div>
+        </div>
+        <div
+            class="
+                flex flex-col
+                md:flex-row
+                justify-center
+                items-center
+                mb-16
+            "
+        >
+            <h2 class="text-2xl md:text-5xl md:flex-grow md:text-right md:pr-12 uppercase text-right flex-grow mr-8">
+                Make accessible code,<br>start from basics</h2>
+            <div class="mx-auto w-auto max-w-[350px]">
+                <img
+                    src="assets/images/we-code-accessibly.png"
+                    loading="lazy"
+                    alt="We code accessibly"
+                >
+            </div>
+        </div>
+         <div class="mb-12 lg:ml-[30%]">
+            <Markdown>
+                * Write valid HTML and use semantic elements (headings, aside, header, nav etc...)
+                * Remember about alternative textx for images - they should be descriptive
+                * Check your forms - use label for inputs, autocompletion and understandable validation
+                * Make focus state visible and distinctive
+                * Use headings to manage your content, keep them in order
+                * Implement "Skip navigation" link
+                * Ensure keyboard navigation for all focusable and interactive elements on the website.
+                * Fix empty buttons and links - if a content of link or button is an image only, use "aria-label" to provide alternative text
+            </Markdown>
+         </div>
+         <div class="mb-12 lg:mr-[30%]">
+            <Markdown>
+                I suppose, there is still a lot to do to make your website accessible. It good to strat from somewhere... Using the list above, you can quickly fix crucial accessibility issues. Give it a try :)!
+            </Markdown>
+         </div>
+    </div>
+</section>
+</BaseLayout>
