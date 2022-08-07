@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Markdown from '@astrojs/markdown-component';
 
 // page props
-let title = 'A11y in a nutshel - MMPL2021';
+let title = 'A11y in a nutshel';
 let description = 'Imformation about A11y with data for ecommerce for MMPL2021 accessibility corner';
 ---
 
@@ -28,7 +28,17 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
     >
         Inclusion<br><span class="tracking-widest">matters</span>
     </h1>
-    <div class="mx-auto w-auto max-w-[220px]">
+    <a
+        class="
+            mx-auto w-auto max-w-[220px]
+            hover:bg-transparent
+            focus:bg-transparent
+            hover:transform hover:scale-105
+        "
+        href="https://snow.dog/accessibility-audit"
+        aria-label="Snowdog website, for us inclusion matters"
+        target="_blank"
+    >
         <img
             src="/assets/images/accessibility-is-necessity.png"
             loading="lazy"
@@ -36,12 +46,9 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
             width="220"
             height="220"
         >
-    </div>
+    </a>
 </div>
 <section class="mb-8">
-    <p class="mb-4 text-center">
-            Do you want to <b>test a11y</b> of your website with <b>our expert</b> or talk about accessibility? <br>Drop by to <b>Room B</b> on #MM21PL (ground floor).<br><br>
-    </p>
     <p class="mb-4">
         Web accessibility is not a "nice to have" feature anymore. It is a standard and should be considered as a default part of your website, next to performance and SEO.
     </p>
@@ -62,33 +69,24 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
         </div>
         <div class="mb-12 lg:mr-[30%]">
             <Markdown>
-                In February of 2019, 2020, and 2021 WebAIM conducted an accessibility evaluation of the home pages for the top 1,000,000 web sites - [The WebAIM Million](https://webaim.org/projects/million/). 97.4% of home pages had detectable WCAG 2 failures! (only automatically detectable errors).
+                For 4 years, in February WebAIM conducted an accessibility evaluation of the home pages for the top 1,000,000 web sites - [The WebAIM Million](https://webaim.org/projects/million/). 96.8% of home pages had detectable WCAG 2 failures! (only automatically detectable errors, slightly improved from 97.6% from 2021).
             </Markdown>
             <div class="my-8 max-w-[650px] mx-auto">
                 <img
-                    src="/assets/images/webaim-wcag-failures.png"
+                    src="/assets/images/webaim-wcag-failures.jpeg"
                     loading="lazy"
-                    alt="Most common WCAG failures: Low contrast ratio: 86.4% in 2021, 86.3% in 2021, 85.3% in 2019; Missing alternatove text for images: 60.6% in 2021, 66% in 2020, 68% in 2019; Missing form input: 54.4% in 2021, 53.8% in 2021, 52.8% in 2019; Empty links: 51.3% in 2021, 59.9% in 2020, 58.1% in 2019; Missing document language: 28.9% in 2021, 28% in 2020, 33.1% in 2019; Empty buttons: 26.9% in 2021, 28.7% in 2020, 25% in 2019"
+                    alt="Most common WCAG failures: Low contrast ratio: 83.9% in 2022, 86.4% in 2021, 86.3% in 2021, 85.3% in 2019; Missing alternative text for images: 55.4% in 2022, 60.6% in 2021, 66% in 2020, 68% in 2019; Empty links:  50.1% in 2022, 51.3% in 2021, 59.9% in 2020, 58.1% in 2019; Missing form input labels: 46.1% in 2022, 54.4% in 2021, 53.8% in 2020, 52.8% in 2019; Empty buttons: 27.2% in 2022, 26.9% in 2021, 28.7% in 2020, 25% in 2019; Missing document language: 22.3% in 2022, 28.9% in 2021, 28% in 2020, 33.1% in 2019;"
                     width="650"
                     height="344"
                 >
             </div>
             <div class="mb-8 max-w-[650px] mx-auto">
                 <img
-                    src="/assets/images/webaim-ecommerce.png"
+                    src="/assets/images/webaim-ecommerce.jpeg"
                     loading="lazy"
-                    alt="Accessibility of home pages in most common ecommerce platforms: Shopify: 14025 (1.4%) with average numbers of errors 54.1, which increase of 5% from last year; Woocommerce: 32127 (3.2%) with average numbers of errors 67, which increase of 30.4% from last year; Magento: 5577 (0.6%) with average numbers of errors 79, which increase of 55.1% from last year"
+                    alt="Accessibility of home pages in most common ecommerce platforms: Squarespace: 6438 homepages with average numbers of errors 19.2 which decrease of 62.2% (bravo) from last year; Shopify: 16624 homepages with average numbers of errors 58.5, which increase of 15.1% from last year; Woocommerce: 39023 homepages with average numbers of errors 68.5 which increase of 34.8% from last year; Magento: 5309 homepages with average numbers of errors 83.4 which increase of 64.1% from last year"
                     width="650"
                     height="251"
-                >
-            </div>
-            <div class="mb-8 max-w-[650px] mx-auto">
-                <img
-                    src="/assets/images/webaim-js-frameworks.png"
-                    loading="lazy"
-                    alt="Accessibility of home pages in most common js frameworks: React: 26773 (2.7%) with average numbers of errors 50.4, which decrease of 1.9% from last year; MooTools: 8270 (0.8%) with average numbers of errors 54.8, which increase of 674% from last year; GSAP: 6612 (0.7%) with average numbers of errors 57.9, which increase of 12.7% from last year; Requirejs: 13612 (1.4%) with average numbers of errors 60.7, which increase of 18.1% from last year; Prototype: 5313 (0.5%) with average numbers of errors 62.6, which increase of 21.8% from last year; BAckbone.js: 6003 (0.6%) with average numbers of errors 63.9, which increase of 24.4% from last year; Angular: 5775 (0.6%) with average numbers of errors 64.9, which increase of 26.4% from last year; Vuejs: 18358 (1.8%) with average numbers of errors 67.4, which increase of 31.1% from last year;"
-                    width="650"
-                    height="348"
                 >
             </div>
         </div>
@@ -97,7 +95,7 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
             <div class="mb-8">
                 <h3>Data from UK</h3>
                 <Markdown>
-                    The [Purple Pound](https://wearepurple.org.uk/business/) refers to the spending power of disabled households which is defined as a household in which at least one of the members have reported a disability. The key stand out statistics are as follows:
+                    The [Purple Pound](https://wearepurple.org.uk/the-purple-pound-infographic/) refers to the spending power of disabled households which is defined as a household in which at least one of the members have reported a disability. The key stand out statistics are as follows:
                     * More than 1 in 5 potential UK consumers are disabled.
                     * The number of disabled people in the UK is increasing – from 11.9 million (in 2014) to *13.3 million*.
                     * **The prevalence of disability rises with age**.
@@ -130,19 +128,19 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
         <div class="mb-8 lg:mr-[30%]">
             <h2>What about lawsuits?</h2>
             <Markdown>
-                According to latest [ADA Digital Accessibility Lawsuits (Mid year report 2021)](https://f.hubspotusercontent30.net/hubfs/3280432/Remediated%20-%202021_MidYear_UsableNet_WebAccessibilityLawsuit_Report_FINAL_06292021%20(5).pdf), *one lawsuit is filed every hour*. The number of lawsuits rise from year to year:
+                According to latest [ADA Digital Accessibility Lawsuits (Mid year report 2022)](https://info.usablenet.com/2022-midyear-digital-accessibility-lawsuit-report-download-page), *one lawsuit is filed every hour*. The number of lawsuits rise from year to year:
             </Markdown>
             <div class="mb-8">
-                <figure class="mt-10 max-w-[500px] mx-auto">
+                <figure class="mt-10 max-w-[650px] mx-auto">
                     <img
-                        src="/assets/images/ada-lawsuits-2018-2021.png"
+                        src="/assets/images/ada-lawsuits-2018-2022.jpeg"
                         loading="lazy"
-                        alt="ADA Lawsuits: in 2018 - 2314 cases, in 2019 - 2890 cases, in 2020 - 3503 cases, 2021 - 4195 cases (estimated by the end of 2021)"
-                        width="489"
-                        height="227"
+                        alt="ADA Lawsuits: in 2018 - 2314 cases, in 2019 - 2890 cases, in 2020 - 3503 cases, 2021 - 4011 cases, 2022 - 4455 cases (estimated by the end of 2022)"
+                        width="900"
+                        height="457"
                     >
                     <figcaption>
-                        ADA-based cases so far in 2021 plot a path to 4,000 lawsuits in 2021. This includes cases filed in federal court and those filed in California under the Unruh Act with a direct reference to violation of the ADA.
+                        ADA-based cases - 4011 in 2021, 4455 Estimated by the end of 2022. This includes cases filed in federal court and those filed in California under the Unruh Act with a direct reference to violation of the ADA.
                     </figcaption>
                 </figure>
             </div>
@@ -152,18 +150,22 @@ let description = 'Imformation about A11y with data for ecommerce for MMPL2021 a
                 </Markdown>
                 <div class="my-8">
                     <img
-                        src="/assets/images/ada-lawsuits-by-industry.png"
+                        src="/assets/images/ada-lawsuits-by-industry.jpeg"
                         loading="lazy"
-                        alt="ADA Lawsuits by industry: e-Commerce: 73.66%, Digital Media & Agencies: 4.14%, Banking/Financial: 3.56%, Food Services: 3.31%, Healthcare: 2.54%, Travel.Hospitality: 1.84%, Automotive: 1.46%, Education: 1,34%, Entertainment & Leisure: 1.08%, Fitness & Wellness: 0.83%, Real Estate Agencies & Properties: 0.45%, Insurance: 0.32%, Telecommunications: 0.06%, Other: 5.41%"
+                        alt="ADA Lawsuits by industry: e-Commerce: 74%, others: 26%"
                         class="mx-auto"
                         width="530"
                         height="707"
                     >
                 </div>
+                <Markdown>
+                    Small and big companies receive ADA-based digital lawsuit and big e-commerce brands are in the spotlight.<br><br>
+                    Widgets and overlays don't resolve a problem: According Usablenet lawsuit report "Businesses **using accessibility widgets received more than 300 lawsuits**, a big YOY increase. In 2021, we reviewed 400 cases for the entire year. These lawsuits list the widget features as a barrier to equal access in addition to WCAG violations and other user web barriers."<br><br>
+                </Markdown>
             </div>
             <div>
                 <Markdown>
-                    Lawsuits in 2021 reflect the importance of considering accessibility for **all digital channels and content**. Accessibility on desktop websites dominates the number of lawsuits. *Mobile Apps continue to rise* along with a new trend in video-related claims. Video claims demand that all videos have closed caption and audio descriptions.
+                    Lawsuits in 2021 (according to usablenet mid 2021 report) reflect the importance of considering accessibility for **all digital channels and content**. Accessibility on desktop websites dominates the number of lawsuits. *Mobile Apps continue to rise* along with a new trend in video-related claims. Video claims demand that all videos have closed caption and audio descriptions.
                 </Markdown>
                 <div class="my-8">
                     <img
